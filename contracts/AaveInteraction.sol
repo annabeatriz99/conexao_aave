@@ -33,8 +33,20 @@ contract AaveInteraction {
     }
 
     // Obtenha o saldo do usuário de um ativo no Aave
+    function getUserAccountData(address user)
+    external
+    view
+    returns (
+        uint256 totalCollateralETH,
+        uint256 totalDebtETH,
+        uint256 availableBorrowsETH,
+        uint256 currentLiquidationThreshold,
+        uint256 ltv,
+        uint256 healthFactor
+    );
     function getUserReserveData(address asset, address user) external view returns (uint256, uint256) {
         (uint256 currentATokenBalance,,,) = pool.getUserAccountData(user);
         return (currentATokenBalance, IERC20(asset).balanceOf(user));
     }
+    function getUserAccountData(address user) external view returns (...) ;
 }

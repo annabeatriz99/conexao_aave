@@ -1,12 +1,21 @@
 {
+  "name": "conexao_aave",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
-    "axios": "^1.7.9"
+    "@aave/core-v3": "^1.19.3",
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.7",
+    "solc": "^0.8.28"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-ethers": "^3.0.8",
-    "@nomiclabs/hardhat-ethers": "^2.2.3",
-    "dotenv": "^16.4.7",
-    "ethers": "^6.13.5",
-    "hardhat": "^2.22.17"
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "ethers": "^6.1.0",
+    "hardhat": "^2.22.1"
   }
 }
